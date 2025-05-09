@@ -1,0 +1,16 @@
+#!/bin/bash 
+
+# Remove existing target if it's a file or directory
+rm -rf $HOME/.config/hypr
+# Create symlink
+ln -s $HOME/personal/env/.config/hypr $HOME/.config/hypr
+
+# Remove existing target if it's a file or directory
+rm -rf $HOME/.config/nvim
+# Create symlink
+ln -s $HOME/personal/env/.config/nvim $HOME/.config/nvim
+
+# Remove existing target if it's a file or directory
+rm -rf $HOME/.config/zed
+# Create symlink
+ln -s $HOME/personal/env/.config/zed $HOME/.config/zed

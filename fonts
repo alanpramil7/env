@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Creating font dirs"
+mkdir -p ~/.local/share/fonts/
+mkdir -p /tmp/font
+
+# Download the font
+wget -P /tmp/font/ https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/ComicShannsMono.zip
+
+# Unzip the font into the target directory
+unzip /tmp/font/ComicShannsMono.zip -d ~/.local/share/fonts/
+
+# Refresh the font cache
+fc-cache -v
+
+rm -rf /tmp/font
+

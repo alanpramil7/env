@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-sudo pacman -S --noconfirm --needed git brightnessctl vim openssh
+sudo pacman -S --noconfirm --needed git brightnessctl vim openssh curl unzip wget neovim nvidia nvidia-utils nvidia-settings
+
+# yay -S --noconfirm  zed-preview-bin 

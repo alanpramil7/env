@@ -2,8 +2,16 @@
 
 if [ "$ENV_DIR" == "" ]; then
 	echo "set the ENV_DIR variable."
+	exit 1
 fi
 
 $ENV_DIR/programs
 $ENV_DIR/yay
 $ENV_DIR/keyd
+$ENV_DIR/git
+
+
+$ENV_DIR/symlinks
+
+
+
