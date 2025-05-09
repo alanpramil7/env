@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if pacman -Qi yay >/dev/null 2>&1; then
+    echo "Package is installed"
+else
+    echo "yay is not installed. Installing yay"
+    rm -rf /tmp/yay
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    
+    cd /tmp/yay
+    
+    makepkg -si
+    
+    rm -rf /tmp/yay
+fi
+
+

@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Check if keyd is installed
+if ! command -v keyd >/dev/null 2>&1; then
+    echo "keyd not found. Installing..."
+
+    rm -rf /tmp/keyd
+    
+    git clone https://github.com/rvaiya/keyd /tmp/keyd
+    cd /tmp/keyd
+    make && sudo make install
+    sudo systemctl enable --now keyd
+    
+    rm -rf /tmp/keyd
+
+    if [ $? -ne 0 ]; then
+        echo "Failed to install keyd. Exiting."
+        exit 1
+    fi
+else
+    echo "keyd is already installed."
+fi
+
+# Ensure the config directory exists
+sudo mkdir -p /etc/keyd
+
+# Create default.conf only if it doesn't already exist
+if [ ! -f /etc/keyd/default.conf ]; then
+    echo "Creating /etc/keyd/default.conf..."
+    sudo tee /etc/keyd/default.conf > /dev/null <<EOF
+[ids]
+
+*
+
+[main]
+
+# Maps capslock to escape when pressed and control when held.
+capslock = overload(control, esc)
+
+# Remaps the escape key to capslock
+esc = capslock
+EOF
+else
+    echo "/etc/keyd/default.conf already exists. Skipping creation."
+fi
+
+# Enable and start keyd service
+echo "Enabling and starting keyd..."
+sudo systemctl enable keyd
+sudo systemctl restart keyd
+
+echo "Done."
+
