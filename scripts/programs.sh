@@ -46,4 +46,12 @@ echo "Base packages installed successfully."
 # Uncomment if needed:
 # yay -S --noconfirm zed-preview-bin
 
+# Installing rust if not already installed
+if ! command -v rustc &> /dev/null || ! command -v cargo &> /dev/null; then
+    echo "Rust not found. Installing Rust..."
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+else
+    echo "Rust is already installed."
+fi
+
 exit 0
