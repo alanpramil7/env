@@ -31,7 +31,8 @@ sudo pacman -S --noconfirm --needed \
     neofetch \
     btop \
     htop \
-    tmux
+    tmux \
+    wl-clipboard
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then
