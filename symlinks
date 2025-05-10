@@ -44,6 +44,7 @@ create_symlink() {
 # Create symlinks for each configuration
 create_symlink "$HOME/personal/env/.config/hypr" "$HOME/.config/hypr"
 create_symlink "$HOME/personal/env/.config/nvim" "$HOME/.config/nvim"
+create_symlink "$HOME/personal/env/.config/tmux" "$HOME/.config/tmux"
 create_symlink "$HOME/personal/env/.config/zed" "$HOME/.config/zed"
 create_symlink "$HOME/personal/env/.config/.zshrc" "$HOME/.zshrc"
 

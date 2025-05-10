@@ -88,6 +88,10 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nvim'
 # fi
 
+alias v='nvim'
+alias e='exit'
+alias c='clear'
+
 export EDITOR='nvim'
 export ENV_DIR='~/personal/env'
 

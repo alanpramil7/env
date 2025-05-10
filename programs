@@ -27,7 +27,11 @@ sudo pacman -S --noconfirm --needed \
     nvidia-settings \
     lazygit \
     nautilus \
-    rofi
+    rofi \
+    neofetch \
+    btop \
+    htop \
+    tmux
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then
