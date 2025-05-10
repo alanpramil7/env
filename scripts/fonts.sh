@@ -8,7 +8,15 @@
 # Exit on error
 set -e
 
-echo "Setting up ComicShannsMono Nerd Font..."
+echo "Checking for ComicShannsMono Nerd Font..."
+
+# Check if font is already installed
+if fc-list | grep -i "ComicShannsMono" > /dev/null; then
+    echo "ComicShannsMono Nerd Font is already installed. Exiting."
+    exit 0
+fi
+
+echo "ComicShannsMono Nerd Font not found. Setting up..."
 
 # Create necessary directories
 echo "Creating font directories..."
