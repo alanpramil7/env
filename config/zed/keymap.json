@@ -1,0 +1,47 @@
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "shift-u": "editor::Redo",
+      "ctrl-a": "editor::SelectAll",
+      "space f": "editor::Format",
+      "space c a": "editor::ToggleCodeActions",
+      "space r r": "editor::Rename",
+      "space f f": "file_finder::Toggle",
+      "space x x": "diagnostics::Deploy",
+      "space p p": "workspace::ToggleLeftDock",
+      "space v v": "editor::GoToDefinitionSplit",
+      "space w": "workspace::SaveAll",
+      "space q": "pane::CloseActiveItem",
+      "space space": "terminal_panel::ToggleFocus",
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "alt-a": "workspace::ToggleRightDock",
+      "alt-s": "pane::DeploySearch",
+      "ctrl-k": "pane::SplitLeft",
+      "ctrl-j": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "space space": "workspace::ToggleBottomDock",
+      "ctrl-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore" // remap jk in insert mode to escape.
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // put key-bindings here (in addition to above) if you want them to
+      // work when no editor exists
+      "space f": "file_finder::Toggle"
+    }
+  }
+]

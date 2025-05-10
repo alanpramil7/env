@@ -82,26 +82,26 @@ done
 print_status() {
   local color=$1
   local message=$2
-  
+
   # ANSI color codes
   local GREEN='\033[0;32m'
   local YELLOW='\033[1;33m'
   local RED='\033[0;31m'
   local BLUE='\033[0;34m'
   local NC='\033[0m' # No Color
-  
+
   case $color in
     "success")
-      echo -e "${GREEN}✓ ${message}${NC}"
+      echo -e "${GREEN}✓  ${message}${NC}"
       ;;
     "warning")
-      echo -e "${YELLOW}⚠ ${message}${NC}"
+      echo -e "${YELLOW}⚠  ${message}${NC}"
       ;;
     "error")
-      echo -e "${RED}✗ ${message}${NC}"
+      echo -e "${RED}✗  ${message}${NC}"
       ;;
     "info")
-      echo -e "${BLUE}ℹ ${message}${NC}"
+      echo -e "${BLUE}ℹ  ${message}${NC}"
       ;;
     *)
       echo "$message"
@@ -113,26 +113,26 @@ print_status() {
 run_script() {
   local script_name=$1
   local script_path="$ENV_DIR/scripts/${script_name}.sh"
-  
+
   # Skip if requested
   if [ "$ONLY_SCRIPT" != "" ] && [ "$ONLY_SCRIPT" != "$script_name" ]; then
     print_status "info" "Skipping $script_name (--only=$ONLY_SCRIPT specified)"
     return 0
   fi
-  
+
   # Skip based on flags
   local skip_var="SKIP_$(echo $script_name | tr '[:lower:]' '[:upper:]')"
   if [ "${!skip_var}" = "true" ]; then
     print_status "info" "Skipping $script_name (--skip-$script_name specified)"
     return 0
   fi
-  
+
   # Check if script exists
   if [ ! -f "$script_path" ]; then
     print_status "error" "Script $script_path not found"
     return 1
   fi
-  
+
   # Make script executable if needed
   if [ ! -x "$script_path" ]; then
     print_status "warning" "Script $script_path is not executable. Setting permissions..."
@@ -141,17 +141,17 @@ run_script() {
       return 1
     }
   fi
-  
+
   # Execute the script
   print_status "info" "Running $script_name..."
   "$script_path"
   local status=$?
-  
+
   if [ $status -ne 0 ]; then
     print_status "error" "$script_name failed with exit code $status"
     return $status
   fi
-  
+
   print_status "success" "$script_name completed successfully"
   return 0
 }
