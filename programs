@@ -25,7 +25,9 @@ sudo pacman -S --noconfirm --needed \
     nvidia \
     nvidia-utils \
     nvidia-settings \
-    lazygit
+    lazygit \
+    nautilus \
+    rofi
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then
@@ -37,6 +39,6 @@ echo "Base packages installed successfully."
 
 # Optional: Install packages from AUR using yay
 # Uncomment if needed:
-# yay -S --noconfirm zed-preview-bin 
+# yay -S --noconfirm zed-preview-bin
 
 exit 0
