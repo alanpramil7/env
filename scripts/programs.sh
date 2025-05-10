@@ -32,7 +32,10 @@ sudo pacman -S --noconfirm --needed \
     btop \
     htop \
     tmux \
-    wl-clipboard
+    wl-clipboard \
+    waybar \
+    ripgrep \
+    onefetch
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then

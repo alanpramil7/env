@@ -12,15 +12,15 @@ set -e
 create_symlink() {
     local source="$1"
     local target="$2"
-    
+
     echo "Setting up symlink for $target..."
-    
+
     # Check if source exists
     if [ ! -e "$source" ]; then
         echo "Error: Source path $source does not exist."
         return 1
     fi
-    
+
     # Remove existing target if it's a file or directory
     if [ -e "$target" ] || [ -L "$target" ]; then
         echo "Removing existing $target..."
@@ -29,7 +29,7 @@ create_symlink() {
             return 1
         }
     fi
-    
+
     # Create parent directory if needed
     local parent_dir=$(dirname "$target")
     if [ ! -d "$parent_dir" ]; then
@@ -39,14 +39,14 @@ create_symlink() {
             return 1
         }
     fi
-    
+
     # Create symlink
     echo "Creating symlink: $target -> $source"
     ln -s "$source" "$target" || {
         echo "Error: Failed to create symlink for $target."
         return 1
     }
-    
+
     echo "Symlink for $target created successfully."
     return 0
 }
@@ -60,6 +60,8 @@ create_symlink "$BASE_DIR/config/ghostty" "$HOME/.config/ghostty"
 create_symlink "$BASE_DIR/config/nvim" "$HOME/.config/nvim"
 create_symlink "$BASE_DIR/config/tmux" "$HOME/.config/tmux"
 create_symlink "$BASE_DIR/config/zed" "$HOME/.config/zed"
+create_symlink "$BASE_DIR/config/waybar" "$HOME/.config/waybar"
+create_symlink "$BASE_DIR/config/rofi" "$HOME/.config/rofi"
 create_symlink "$BASE_DIR/config/.zshrc" "$HOME/.zshrc"
 
 echo "All symlinks created successfully."

@@ -1,0 +1,44 @@
+*{
+    font-family: ComicShannsMono Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+    color: white;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: rgba(0,0,0,0.6);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#tags button {
+    padding: 5px;
+    background: rgba(0,0,0,0);
+    transition-property: none;
+}
+
+#tags button:hover {
+    background-color: #31304D;
+    border: none;
+}
+
+#tray,
+#mpd,
+#custom-weather,
+#cpu,
+#temperature,
+#memory,
+#sway-mode,
+#backlight,
+#pulseaudio,
+#custom-vpn,
+#disk,
+#custom-recorder,
+#custom-audiorec,
+#battery,
+#clock,
+#network {
+	padding: 5px 10px;
+}

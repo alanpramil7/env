@@ -13,7 +13,11 @@ return {
     config = function()
         local telescope = require('telescope')
 
-        telescope.setup({})
+        telescope.setup({
+            file_ignore_patters = {
+                "target"
+            }
+        })
 
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
