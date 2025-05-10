@@ -1,5 +1,42 @@
 #!/usr/bin/env bash
+#
+# Script for installing essential system programs using pacman
+# This script installs base development tools and utilities
+#
+# Usage: ./programs
 
-sudo pacman -S --noconfirm --needed git brightnessctl vim openssh curl unzip wget neovim nvidia nvidia-utils nvidia-settings
+# Set exit on error
+set -e
 
-# yay -S --noconfirm  zed-preview-bin 
+echo "Installing essential programs..."
+
+# Install base development packages and utilities
+# --noconfirm: Don't ask for confirmation
+# --needed: Don't reinstall packages that are already installed
+sudo pacman -S --noconfirm --needed \
+    git \
+    brightnessctl \
+    vim \
+    openssh \
+    curl \
+    unzip \
+    wget \
+    neovim \
+    nvidia \
+    nvidia-utils \
+    nvidia-settings \
+    lazygit
+
+# Check if installation was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to install packages."
+    exit 1
+fi
+
+echo "Base packages installed successfully."
+
+# Optional: Install packages from AUR using yay
+# Uncomment if needed:
+# yay -S --noconfirm zed-preview-bin 
+
+exit 0

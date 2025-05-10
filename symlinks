@@ -1,16 +1,51 @@
-#!/bin/bash 
+#!/bin/bash
+#
+# Script to create symbolic links for configuration files
+# This script sets up symlinks from the user's home directory to the configurations in the env repository
+#
+# Usage: ./symlinks
 
-# Remove existing target if it's a file or directory
-rm -rf $HOME/.config/hypr
-# Create symlink
-ln -s $HOME/personal/env/.config/hypr $HOME/.config/hypr
+# Exit on error
+set -e
 
-# Remove existing target if it's a file or directory
-rm -rf $HOME/.config/nvim
-# Create symlink
-ln -s $HOME/personal/env/.config/nvim $HOME/.config/nvim
+# Function to create a symlink
+create_symlink() {
+    local source="$1"
+    local target="$2"
+    
+    echo "Setting up symlink for $target..."
+    
+    # Check if source exists
+    if [ ! -e "$source" ]; then
+        echo "Error: Source path $source does not exist."
+        return 1
+    fi
+    
+    # Remove existing target if it's a file or directory
+    if [ -e "$target" ] || [ -L "$target" ]; then
+        echo "Removing existing $target..."
+        rm -rf "$target" || {
+            echo "Error: Failed to remove $target."
+            return 1
+        }
+    fi
+    
+    # Create symlink
+    echo "Creating symlink: $target -> $source"
+    ln -s "$source" "$target" || {
+        echo "Error: Failed to create symlink for $target."
+        return 1
+    }
+    
+    echo "Symlink for $target created successfully."
+    return 0
+}
 
-# Remove existing target if it's a file or directory
-rm -rf $HOME/.config/zed
-# Create symlink
-ln -s $HOME/personal/env/.config/zed $HOME/.config/zed
+# Create symlinks for each configuration
+create_symlink "$HOME/personal/env/.config/hypr" "$HOME/.config/hypr"
+create_symlink "$HOME/personal/env/.config/nvim" "$HOME/.config/nvim"
+create_symlink "$HOME/personal/env/.config/zed" "$HOME/.config/zed"
+create_symlink "$HOME/personal/env/.config/.zshrc" "$HOME/.zshrc"
+
+echo "All symlinks created successfully."
+exit 0
