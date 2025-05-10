@@ -14,9 +14,7 @@ vim.keymap.set("n", "=ap", "ma=ap'a")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>fp", function()
-    require("conform").format({ bufnr = 0 })
-end)
+vim.keymap.set("n", "<leader>fp", vim.lsp.buf.format)
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
