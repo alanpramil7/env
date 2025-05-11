@@ -44,7 +44,7 @@
 
 theme = rose-pine
 font-family = ComicShannsMono Nerd Font Mono
-font-size = 14
+font-size = 12
 adjust-cell-height = 30%
 resize-overlay = never
 

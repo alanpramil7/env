@@ -19,15 +19,15 @@ local AlanGroup = augroup('Alan', {})
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
 
-function R(name)
-    require("plenary.reload").reload_module(name)
-end
+-- function R(name)
+--     require("plenary.reload").reload_module(name)
+-- end
 
-vim.filetype.add({
-    extension = {
-        templ = 'templ',
-    }
-})
+-- vim.filetype.add({
+--     extension = {
+--         templ = 'templ',
+--     }
+-- })
 
 autocmd('TextYankPost', {
     group = yank_group,
@@ -40,11 +40,11 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({ "BufWritePre" }, {
-    group = AlanGroup,
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
-})
+-- autocmd({ "BufWritePre" }, {
+--     group = AlanGroup,
+--     pattern = "*",
+--     command = [[%s/\s\+$//e]],
+-- })
 
 autocmd('LspAttach', {
     group = AlanGroup,
