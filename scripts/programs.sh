@@ -35,7 +35,10 @@ sudo pacman -S --noconfirm --needed \
     wl-clipboard \
     waybar \
     ripgrep \
-    onefetch
+    onefetch \
+    meson \
+    clang \
+    bluetui
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then
