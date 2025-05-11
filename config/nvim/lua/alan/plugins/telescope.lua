@@ -15,7 +15,8 @@ return {
 
         telescope.setup({
             file_ignore_patters = {
-                "target"
+                "target",
+                "build"
             }
         })
 

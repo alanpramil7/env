@@ -20,7 +20,8 @@
       "alt-a": "workspace::ToggleRightDock",
       "alt-s": "pane::DeploySearch",
       "ctrl-k": "pane::SplitLeft",
-      "ctrl-j": "pane::SplitRight"
+      "ctrl-j": "pane::SplitRight",
+      "ctrl-l": "project_symbols::Toggle"
     }
   },
   {
