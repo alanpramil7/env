@@ -38,7 +38,9 @@ sudo pacman -S --noconfirm --needed \
     onefetch \
     meson \
     clang \
-    bluetui
+    bluetui \
+    grim \
+    slurp
 
 # Check if installation was successful
 if [ $? -ne 0 ]; then
