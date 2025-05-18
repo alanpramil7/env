@@ -28,12 +28,9 @@ sudo pacman -S --noconfirm --needed \
     lazygit \
     nautilus \
     rofi \
-    neofetch \
     btop \
     htop \
     tmux \
-    wl-clipboard \
-    waybar \
     ripgrep \
     onefetch \
     meson \
