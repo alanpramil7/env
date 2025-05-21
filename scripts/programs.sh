@@ -15,6 +15,8 @@ echo "Installing essential programs..."
 # --needed: Don't reinstall packages that are already installed
 sudo pacman -S --noconfirm --needed \
     git \
+    alacritty \
+    feh \ 
     brightnessctl \
     vim \
     openssh \
