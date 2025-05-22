@@ -1,44 +1,105 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "model_parameters": [],
-    "default_profile": "ask",
-    "version": "2"
-  },
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  //Enable vim mode
+  "show_edit_predictions": false,
   "vim_mode": true,
+
+  // Set Theme
+  "theme": {
+    "mode": "dark",
+    "dark": "One Dark Pro",
+    "light": "One Light"
+  },
+
+  // Set font
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
   "buffer_font_family": "ComicShannsMono Nerd Font Mono",
-  "theme": {
-    "mode": "system",
-    "light": "One Dark Pro",
-    "dark": "One Dark"
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+
+  // Disable Auto upadte
+  "auto_update": false,
+
+  "base_keymap": null,
+
+  // Edit predections
+  "edit_predictions": {
+    "disabled_globs": [
+      "**/.env*",
+      "**/*.pem",
+      "**/*.key",
+      "**/*.cert",
+      "**/*.crt",
+      "**/.dev.vars",
+      "**/secrets.yml"
+    ]
   },
+  "edit_predictions_disabled_in": ["comment", "string"],
+
+  // cursor
+  "cursor_blink": false,
+
+  // Scrollbar
   "scrollbar": {
     "show": "never"
   },
+
+  // Tab bar
   "tab_bar": {
     "show": false
   },
+
+  // Tool bar
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "agent_review": false,
+    "selections_menu": false
+  },
+
+  // Inclue files
+  "file_scan_inclusions": [".env*"],
+
+  // Indent guides
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 2,
+    "coloring": "fixed",
+    "background_coloring": "disabled"
+  },
+
+  // Diabale telemetry
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "buffer_line_height": {
-    "custom": 1.6
-  },
   "terminal": {
-    "font_family": "ComicShannsMono Nerd Font Mono",
-    "line_height": {
-      "custom": 1.6
+    "alternate_scroll": "off",
+    "blinking": "terminal_controlled",
+    "copy_on_select": true,
+    "dock": "bottom",
+    "default_width": 1080,
+    "default_height": 500,
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    },
+    "env": {},
+    "font_family": "ComicShannsMono Nerd Font",
+    "font_features": null,
+    "font_size": 14,
+    "line_height": "comfortable",
+    "option_as_meta": false,
+    "button": false,
+    "shell": "system",
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "working_directory": "current_project_directory",
+    "scrollbar": {
+      "show": "never"
     }
   }
 }
