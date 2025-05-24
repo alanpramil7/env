@@ -7,13 +7,13 @@
 
 "modules-left": ["river/tags", "hyprland/workspaces", "hyprland/window"],
 "modules-center": ["clock"],
-"modules-right":  ["pulseaudio", "cpu", "memory", "network", "battery"],
+"modules-right":  ["pulseaudio", "bluetooth", "backlight", "cpu", "temperature", "memory", "network", "battery"],
 
 "hyprland/workspaces": {
     "format": "{name}: {icon}",
     "format-icons": {
-      "active": "",
-      "default": ""
+      "active": " ",
+      "default": " "
     }
   },
 
@@ -38,25 +38,47 @@
     "tooltip": false,
     "on-click": "alacritty -e 'htop'"
 },
+ "temperature": {
+	"thermal-zone": 2,
+	"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C ",
+	"format": "{temperatureC}°C "
+},
 "memory": {
     "interval": 5,
     "format": " {used:0.2f}GB",
     "max-length": 10,
-    "tooltip": false,
+    "tooltip": true,
     "warning": 70,
     "critical": 90
 },
+"backlight": {
+	"device": "intel_backlight",
+	"format": "{percent}% {icon}",
+	"format-icons": ["", ""]
+},
 "network": {
   "interval": 2,
-  "format-wifi": "  {signalStrength}%",
+  "format-wifi": "  {signalStrength}% {essid}",
   "format-ethernet": "",
   "format-linked": " {ipaddr}",
   "format-disconnected": " Disconnected",
   "format-disabled": "",
   "tooltip": false,
-  "max-length": 20,
+  "max-length": 30,
   "min-length": 6,
   "format-alt": "{essid}",
+},
+"bluetooth": {
+	"format": " {status}",
+	"format-connected": " {device_alias}",
+	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
 },
 "pulseaudio": {
   // "scroll-step": 1, // %, can be a float

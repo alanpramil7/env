@@ -23,6 +23,7 @@ sudo pacman -S --noconfirm --needed \
     curl \
     unzip \
     wget \
+    swww \
     neovim \
     nvidia \
     nvidia-utils \

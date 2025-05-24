@@ -1,32 +1,42 @@
 *{
     font-family: ComicShannsMono Nerd Font;
-    font-size: 15px;
+    font-size: 13px;
     min-height: 0;
     color: white;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 window#waybar {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.3);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-#tags button {
+#workspaces button {
     padding: 5px;
     background: rgba(0,0,0,0);
+    border: none;
     transition-property: none;
 }
 
-#tags button:hover {
-    background-color: #31304D;
+#workspaces  button:hover {
+    background-color: rgba(0,0,0,0.3);
     border: none;
 }
 
-#tray,
-#mpd,
-#custom-weather,
+#cpu,#backlight, #bluetooth, #pulseaudio, #network, #memory,#temperature, #battery {
+    padding-right: 8px;
+    padding-left: 8px;
+    border-right: 1px solid #6c3483;
+}
+
+#pulseaudio {
+    padding-right: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #6c3483;
+}
+
 #cpu,
 #temperature,
 #memory,

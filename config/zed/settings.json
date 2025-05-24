@@ -1,6 +1,10 @@
 {
   //Enable vim mode
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
+    },
     "model_parameters": [],
     "default_profile": "ask",
     "version": "2"
