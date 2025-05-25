@@ -168,12 +168,12 @@ if [ "$ONLY_SCRIPT" != "" ]; then
 fi
 
 # Run the scripts
-# run_script "programs" || exit 1
-# run_script "yay" || exit 1
-# run_script "fonts" || exit 1
-# run_script "keyd" || exit 1
-# run_script "git" || exit 1
-# run_script "zsh" || exit 1
+run_script "programs" || exit 1
+run_script "yay" || exit 1
+run_script "fonts" || exit 1
+run_script "keyd" || exit 1
+run_script "git" || exit 1
+run_script "zsh" || exit 1
 run_script "symlinks" || exit 1
 
 # Print completion message
