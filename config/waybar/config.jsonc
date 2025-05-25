@@ -77,7 +77,7 @@
   "cpu": {
     "format": " &#8239;{usage}%",
     "tooltip": false,
-    "on-click": "alacritty -e 'htop'"
+    "on-click": "ghostty -e 'btop'"
   },
   "temperature": {
     "thermal-zone": 2,
