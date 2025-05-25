@@ -9,6 +9,7 @@
   "modules-right": [
     "cpu",
     "memory",
+    "network",
     "backlight",
     "pulseaudio",
     "battery"

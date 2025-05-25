@@ -1,0 +1,53 @@
+[env]
+term = "xterm-256color"
+
+[window]
+startup_mode = "Windowed"
+dynamic_padding = false
+dynamic_title = false
+opacity = 0.9
+blur = true
+
+[window.dimensions]
+columns = 150
+lines = 45
+
+[window.padding]
+x = 20
+y = 10
+
+[window.position]
+x = 2500
+y = 700
+
+[font]
+size = 12
+
+[font.normal]
+family = "ComicShannsMono Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+y = 6
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[scrolling]
+multiplier = 15
+history = 10000
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[keyboard]
+bindings = [
+  { key = "Return", mods = "Super", action = "SpawnNewInstance" },
+  { key = "N", mods = "Super", action = "SpawnNewInstance" },
+  { key = "Q", mods = "Super", action = "Quit" },
+]
+
+[general]
+live_config_reload = true
