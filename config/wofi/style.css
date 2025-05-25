@@ -1,0 +1,33 @@
+* {
+  background: none;
+  color: #bfd3ff;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font: ComicShannsMono Nerd Font Mono;
+  font-size: 24px;
+}
+
+#window {
+  background: rgba(29, 36, 51, 0.75);  /* bg with opacity */
+}
+
+#input {
+  padding: 10px;
+}
+
+#outer-box {
+  margin: 24px;
+}
+
+#inner-box {
+  margin-left: 48px;
+}
+
+#entry {
+  padding: 8px;
+}
+
+#entry:selected * {
+  color: #92b7ea;
+}
