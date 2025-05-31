@@ -77,7 +77,7 @@
   "cpu": {
     "format": " &#8239;{usage}%",
     "tooltip": false,
-    "on-click": "ghostty -e 'btop'"
+    "on-click": "~/.local/bin/wezterm -e 'btop'"
   },
   "temperature": {
     "thermal-zone": 2,

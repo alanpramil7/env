@@ -1,7 +1,7 @@
-theme = GitHub Dark
+theme = Solarized Dark - Patched
 font-family = ComicShannsMono Nerd Font Mono
 font-size = 12
-adjust-cell-height = 30%
+adjust-cell-height = 40%
 resize-overlay = never
 
 confirm-close-surface = false
@@ -12,3 +12,4 @@ window-padding-balance = true
 window-save-state = always
 window-padding-x = 10
 window-padding-y = 10
+
