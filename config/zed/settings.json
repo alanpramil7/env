@@ -3,10 +3,10 @@
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-latest"
+      "model": "claude-sonnet-4"
     },
     "model_parameters": [],
-    "default_profile": "write",
+    "default_profile": "ask",
     "version": "2"
   },
   "show_edit_predictions": false,
@@ -15,7 +15,7 @@
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "One Dark Pro",
+    "dark": "JetBrains New Dark",
     "light": "One Light"
   },
 
