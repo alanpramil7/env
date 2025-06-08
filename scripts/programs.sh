@@ -215,6 +215,151 @@ install_rust() {
     return 0
 }
 
+# Install Zig programming language
+install_zig() {
+    log_info "Checking Zig installation..."
+
+    if command -v zig >/dev/null 2>&1; then
+        local zig_version=$(zig version 2>/dev/null)
+        log_success "Zig is already installed (version: $zig_version)"
+        return 0
+    fi
+
+    log_info "Installing Zig programming language..."
+
+    local tmp_dir=$(mktemp -d)
+    local zig_url="https://ziglang.org/download/0.14.1/zig-x86_64-linux-0.14.1.tar.xz"
+    local zig_tar="$tmp_dir/zig.tar.xz"
+
+    # Create .local/bin directory if it doesn't exist
+    mkdir -p "$HOME/.local/bin"
+
+    # Download Zig
+    log_info "Downloading Zig..."
+    curl -L "$zig_url" -o "$zig_tar" || {
+        log_error "Failed to download Zig"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Extract Zig
+    log_info "Extracting Zig..."
+    tar -xf "$zig_tar" -C "$tmp_dir" || {
+        log_error "Failed to extract Zig"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Find the extracted directory
+    local zig_dir=$(find "$tmp_dir" -name "zig-*" -type d | head -1)
+    if [[ ! -d "$zig_dir" ]]; then
+        log_error "Could not find extracted Zig directory"
+        rm -rf "$tmp_dir"
+        return 1
+    fi
+
+    # Move Zig binary and lib folder to .local/bin
+    log_info "Installing Zig to ~/.local/bin..."
+    cp "$zig_dir/zig" "$HOME/.local/bin/" || {
+        log_error "Failed to copy Zig binary"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Copy lib folder
+    cp -r "$zig_dir/lib" "$HOME/.local/bin/" || {
+        log_error "Failed to copy Zig lib folder"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Make sure zig binary is executable
+    chmod +x "$HOME/.local/bin/zig"
+
+    # Clean up
+    rm -rf "$tmp_dir"
+
+    # Verify installation
+    if command -v zig >/dev/null 2>&1; then
+        local zig_version=$(zig version 2>/dev/null)
+        log_success "Zig installed successfully (version: $zig_version)"
+    else
+        log_error "Zig installation verification failed"
+        log_warning "Make sure ~/.local/bin is in your PATH"
+        return 1
+    fi
+
+    return 0
+}
+
+# Install ZLS (Zig Language Server)
+install_zls() {
+    log_info "Checking ZLS installation..."
+
+    if command -v zls >/dev/null 2>&1; then
+        log_success "ZLS is already installed"
+        return 0
+    fi
+
+    log_info "Installing ZLS (Zig Language Server)..."
+
+    local tmp_dir=$(mktemp -d)
+    local zls_url="https://builds.zigtools.org/zls-linux-x86_64-0.14.0.tar.xz"
+    local zls_tar="$tmp_dir/zls.tar.xz"
+
+    # Create .local/bin directory if it doesn't exist
+    mkdir -p "$HOME/.local/bin"
+
+    # Download ZLS
+    log_info "Downloading ZLS..."
+    curl -L "$zls_url" -o "$zls_tar" || {
+        log_error "Failed to download ZLS"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Extract ZLS
+    log_info "Extracting ZLS..."
+    tar -xf "$zls_tar" -C "$tmp_dir" || {
+        log_error "Failed to extract ZLS"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Find and move ZLS binary
+    local zls_binary=$(find "$tmp_dir" -name "zls" -type f | head -1)
+    if [[ ! -f "$zls_binary" ]]; then
+        log_error "Could not find ZLS binary in extracted files"
+        rm -rf "$tmp_dir"
+        return 1
+    fi
+
+    # Move ZLS binary to .local/bin
+    log_info "Installing ZLS to ~/.local/bin..."
+    cp "$zls_binary" "$HOME/.local/bin/" || {
+        log_error "Failed to copy ZLS binary"
+        rm -rf "$tmp_dir"
+        return 1
+    }
+
+    # Make sure zls binary is executable
+    chmod +x "$HOME/.local/bin/zls"
+
+    # Clean up
+    rm -rf "$tmp_dir"
+
+    # Verify installation
+    if command -v zls >/dev/null 2>&1; then
+        log_success "ZLS installed successfully"
+    else
+        log_error "ZLS installation verification failed"
+        log_warning "Make sure ~/.local/bin is in your PATH"
+        return 1
+    fi
+
+    return 0
+}
+
 # Verify package installations
 verify_installations() {
     log_info "Verifying package installations..."
@@ -253,6 +398,15 @@ show_installation_summary() {
         echo "  Rust: $rust_version"
     fi
 
+    if command -v zig >/dev/null 2>&1; then
+        local zig_version=$(zig version 2>/dev/null)
+        echo "  Zig: $zig_version"
+    fi
+
+    if command -v zls >/dev/null 2>&1; then
+        echo "  ZLS: installed"
+    fi
+
     echo
     log_info "Installed applications are ready to use"
     log_info "Some applications may require a restart to function properly"
@@ -288,6 +442,16 @@ main() {
     # Install Rust
     if ! install_rust; then
         log_warning "Rust installation failed, continuing with other packages"
+    fi
+
+    # Install Zig
+    if ! install_zig; then
+        log_warning "Zig installation failed, continuing with other packages"
+    fi
+
+    # Install ZLS
+    if ! install_zls; then
+        log_warning "ZLS installation failed, continuing with other packages"
     fi
 
     # Verify installations

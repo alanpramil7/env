@@ -6,7 +6,7 @@
       "model": "claude-sonnet-4"
     },
     "model_parameters": [],
-    "default_profile": "ask",
+    "default_profile": "write",
     "version": "2"
   },
   "show_edit_predictions": false,
