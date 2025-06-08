@@ -100,14 +100,14 @@ zstyle ':completion:*' rehash false  # improves performance
 zstyle ':completion:*' use-cache true
 
 # Plugin: autosuggestions
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#606090'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=40
 
 # Plugin: syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_MAXLENGTH=120
@@ -122,27 +122,27 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-6]='fg=red'
 
 # Custom styles
 # Errors
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,underline'
+# ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,underline'
 
 # Keywords
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=blue'
 
 # Commands
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=cyan'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=magenta'
-ZSH_HIGHLIGHT_STYLES[global-alias]='fg=magenta'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=magenta'
+# ZSH_HIGHLIGHT_STYLES[precommand]='fg=cyan'
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=magenta'
+# ZSH_HIGHLIGHT_STYLES[global-alias]='fg=magenta'
+# ZSH_HIGHLIGHT_STYLES[arg0]='fg=magenta'
 
 # Strings
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=green'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=green'
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=yellow'
+# ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=green'
+# ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=green'
+# ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=yellow'
 
 # Redirections
-ZSH_HIGHLIGHT_STYLES[redirection]='fg=cyan'
+# ZSH_HIGHLIGHT_STYLES[redirection]='fg=cyan'
 
 # Paths
-ZSH_HIGHLIGHT_STYLES[path]='none'
+# ZSH_HIGHLIGHT_STYLES[path]='none'
 
 export EDITOR='nvim'
 export ENV_DIR='~/personal/env'
@@ -155,4 +155,4 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(zoxide init zsh)"
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"

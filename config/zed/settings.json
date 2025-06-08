@@ -15,7 +15,7 @@
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "JetBrains New Dark",
+    "dark": "Gruvbox Dark Soft",
     "light": "One Light"
   },
 

@@ -12,5 +12,3 @@ configuration{
     sidebar-mode: true;
     border-radius: 10;
 }
-
-@theme "./catppuccin-macchiato.rasi"
