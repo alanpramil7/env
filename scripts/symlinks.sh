@@ -37,6 +37,7 @@ readonly SYMLINK_CONFIG=(
     "config/ghostty:$HOME/.config/ghostty"
     "config/nvim:$HOME/.config/nvim"
     "config/tmux:$HOME/.config/tmux"
+    "config/mpv:$HOME/.config/mpv"
     "config/htop:$HOME/.config/htop"
     "config/zed:$HOME/.config/zed"
     # "config/i3:$HOME/.config/i3"

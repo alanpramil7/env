@@ -48,6 +48,7 @@ readonly DESKTOP_PACKAGES=(
     "firefox"
     "brightnessctl"
     "swww"
+    "mpv"
     "hyprlock"
     "hypridle"
     "nautilus"

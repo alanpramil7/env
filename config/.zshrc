@@ -148,6 +148,7 @@ export EDITOR='nvim'
 export ENV_DIR='~/personal/env'
 
 export PATH="$PATH:/home/al/.local/bin/"
+export PATH="$PATH:/home/al/personal/env/scripts/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
