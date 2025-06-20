@@ -157,3 +157,10 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(zoxide init zsh)"
 
 # . "$HOME/.local/bin/env"
+
+# bun completions
+[ -s "/home/al/.bun/_bun" ] && source "/home/al/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

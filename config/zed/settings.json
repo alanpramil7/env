@@ -29,6 +29,24 @@
   "auto_update": false,
 
   "base_keymap": null,
+  "format_on_save": "prettier",
+
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "pylsp"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            // Fix all auto-fixable lint violations
+            "source.fixAll.ruff": true,
+            // Organize imports
+            "source.organizeImports.ruff": true
+          }
+        }
+      ]
+    }
+  },
 
   // Edit predections
   "edit_predictions": {
