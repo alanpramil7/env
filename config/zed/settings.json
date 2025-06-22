@@ -32,6 +32,9 @@
   "format_on_save": "prettier",
 
   "languages": {
+    "Go": {
+      "format_on_save": "on"
+    },
     "Python": {
       "language_servers": ["ruff", "pylsp"],
       "format_on_save": "on",
