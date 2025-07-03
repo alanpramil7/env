@@ -23,8 +23,8 @@ readonly NC='\033[0m'
 # Package lists
 readonly ESSENTIAL_PACKAGES=(
     "git"
-    "hyprland"
-    "wl-clipboard"
+#    "hyprland"
+#    "wl-clipboard"
     "curl"
     "wget"
     "unzip"
@@ -42,15 +42,15 @@ readonly ESSENTIAL_PACKAGES=(
 )
 
 readonly DESKTOP_PACKAGES=(
-    "alacritty"
+#    "alacritty"
     "ghostty"
     "feh"
-    "firefox"
+#    "firefox"
     "brightnessctl"
     "swww"
     "mpv"
-    "hyprlock"
-    "hypridle"
+#    "hyprlock"
+#    "hypridle"
     "nautilus"
     "rofi"
     "bluetui"

@@ -5,6 +5,7 @@ adjust-cell-height = 40%
 resize-overlay = never
 
 confirm-close-surface = false
+maximize = true
 
 background-opacity = 0.95
 window-decoration = false

@@ -144,6 +144,9 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-6]='fg=red'
 # Paths
 # ZSH_HIGHLIGHT_STYLES[path]='none'
 
+# Keybinds
+bindkey -s ^f "tmux-sessionizer\n"
+
 export EDITOR='nvim'
 export ENV_DIR='~/personal/env'
 
