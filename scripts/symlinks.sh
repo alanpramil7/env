@@ -40,6 +40,7 @@ readonly SYMLINK_CONFIG=(
     "config/mpv:$HOME/.config/mpv"
     "config/htop:$HOME/.config/htop"
     "config/zed:$HOME/.config/zed"
+    "config/tmux-sessionizer:$HOME/.config/tmux-sessionizer"
     # "config/i3:$HOME/.config/i3"
     # "config/alacritty:$HOME/.config/alacritty"
     # "config/wezterm:$HOME/.config/wezterm"

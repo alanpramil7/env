@@ -1,4 +1,4 @@
-theme = GruvboxDarkHard
+theme = GitHub Dark
 font-family = ComicShannsMono Nerd Font Mono
 font-size = 12
 adjust-cell-height = 40%
@@ -7,7 +7,7 @@ resize-overlay = never
 confirm-close-surface = false
 maximize = true
 
-background-opacity = 0.95
+background-opacity = 0.9
 window-decoration = false
 window-padding-balance = true
 window-save-state = always

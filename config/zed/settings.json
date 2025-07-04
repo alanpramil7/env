@@ -15,7 +15,7 @@
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "Gruvbox Dark Soft",
+    "dark": "Base16 Rosé Pine",
     "light": "One Light"
   },
 

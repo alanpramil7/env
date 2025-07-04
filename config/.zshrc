@@ -19,6 +19,9 @@ alias rg="rg --hidden --smart-case --glob='!.git/' --no-search-zip --trim --colo
 alias cp='cp --interactive'
 alias mv='mv --interactive'
 
+# Aliases: utility
+alias bat='cat /sys/class/power_supply/BAT0/capacity'
+
 # Man colors
 man() {
   GROFF_NO_SGR=1 \

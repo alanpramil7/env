@@ -45,7 +45,7 @@ configure_xinitrc() {
     cat > "$XINITRC_PATH" <<EOF
 #!/bin/sh
 # Keyboard repeat rate (delay 200ms, interval 30ms)
-xset r rate 200 50
+xset r rate 200 30
 
 # Launch dwm
 exec dwm
