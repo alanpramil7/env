@@ -45,7 +45,13 @@ configure_xinitrc() {
     cat > "$XINITRC_PATH" <<EOF
 #!/bin/sh
 # Keyboard repeat rate (delay 200ms, interval 30ms)
-xset r rate 200 30
+xset r rate 500 30
+
+# set wallpaper
+feh --bg-scale ~/personal/env/wallpaper/it2.png
+
+# picom compositor
+picom &
 
 # Launch dwm
 exec dwm

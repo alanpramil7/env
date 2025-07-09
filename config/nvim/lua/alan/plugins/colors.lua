@@ -9,7 +9,7 @@
 -- - "photon"      - Minimal theme
 -- - "material"    - Google Material Design
 
-local active_colorscheme = "onedark" -- Change this to switch themes
+local active_colorscheme = "rose-pine" -- Change this to switch themes
 
 local colorschemes = {
     -- GRUVBOX - Retro groove color scheme

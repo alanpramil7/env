@@ -15,7 +15,7 @@
 
       // Split panes
       "ctrl-|": "pane::SplitRight",
-      "ctrl--": "pane::SplitDown",
+      "ctrl-_": "pane::SplitDown",
 
       // Move between panes
       "ctrl-h": "workspace::ActivatePaneLeft",
