@@ -1,3 +1,4 @@
+-- - "komau"       - Komau Theme
 -- - "gruvbox"     - Retro groove colors
 -- - "tokyonight"  - Modern Tokyo night theme
 -- - "catppuccin"  - Soothing pastel theme
@@ -9,9 +10,29 @@
 -- - "photon"      - Minimal theme
 -- - "material"    - Google Material Design
 
-local active_colorscheme = "rose-pine" -- Change this to switch themes
+local active_colorscheme = "komau" -- Change this to switch themes
 
 local colorschemes = {
+    {
+        "andreypopp/vim-colors-plain",
+        name = "plain",
+        priority = 1000,
+        opts = {
+        },
+        config = function(_, opts)
+            vim.cmd.colorscheme("plain-cterm")
+        end,
+    },
+    {
+        "ntk148v/komau.vim",
+        name = "komau",
+        priority = 1000,
+        opts = {
+        },
+        config = function(_, opts)
+            vim.cmd.colorscheme("komau")
+        end,
+    },
     -- GRUVBOX - Retro groove color scheme
     {
         "ellisonleao/gruvbox.nvim",
