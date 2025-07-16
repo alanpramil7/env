@@ -6,7 +6,8 @@
       "model": "claude-sonnet-4"
     },
     "model_parameters": [],
-    "default_profile": "ask"
+    "default_profile": "write",
+    "version": "2"
   },
   "show_edit_predictions": false,
   "vim_mode": true,
@@ -14,7 +15,7 @@
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "Monosami Dark",
+    "dark": "Base16 Gotham",
     "light": "One Light"
   },
 
@@ -74,7 +75,7 @@
 
   // Tab bar
   "tab_bar": {
-    "show": true
+    "show": false
   },
 
   // Tool bar

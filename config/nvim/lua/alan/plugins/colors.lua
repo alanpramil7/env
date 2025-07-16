@@ -10,7 +10,7 @@
 -- - "photon"      - Minimal theme
 -- - "material"    - Google Material Design
 
-local active_colorscheme = "komau" -- Change this to switch themes
+local active_colorscheme = "photon" -- Change this to switch themes
 
 local colorschemes = {
     {
@@ -24,12 +24,13 @@ local colorschemes = {
         end,
     },
     {
-        "ntk148v/komau.vim",
+        "alanpramil7/komau.vim",
         name = "komau",
         priority = 1000,
         opts = {
         },
         config = function(_, opts)
+            vim.g.komau_transparent = 1
             vim.cmd.colorscheme("komau")
         end,
     },
@@ -75,7 +76,7 @@ local colorschemes = {
         opts = {
             style = "storm", -- storm, night, moon, day
             light_style = "day",
-            transparent = false,
+            transparent = true,
             terminal_colors = true,
             styles = {
                 comments = { italic = true },
