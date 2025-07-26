@@ -25,6 +25,7 @@ local colorschemes = {
         end,
     },
     {
+
         "askfiy/visual_studio_code",
         name = "visual_studio_code",
         priority = 100,

@@ -3,8 +3,8 @@
   "context_servers": {},
   "agent": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "google",
+      "model": "gemini-2.5-pro"
     },
     "model_parameters": [],
     "default_profile": "ask"
@@ -16,6 +16,11 @@
     "mode": "dark",
     "dark": "VSCode Dark Modern",
     "light": "One Light"
+  },
+  "project_panel": {
+    "dock": "right",
+    "git_status": true,
+    "default_width": 240
   },
   // Set font
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
