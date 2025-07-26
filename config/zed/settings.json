@@ -1,5 +1,6 @@
 {
   //Enable vim mode
+  "context_servers": {},
   "agent": {
     "default_model": {
       "provider": "zed.dev",
@@ -10,32 +11,30 @@
   },
   "show_edit_predictions": false,
   "vim_mode": true,
-
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "Monosami Dark",
+    "dark": "VSCode Dark Modern",
     "light": "One Light"
   },
-
   // Set font
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
   "buffer_font_family": "ComicShannsMono Nerd Font Mono",
   "ui_font_size": 10,
   "buffer_font_size": 10,
-
   // Disable Auto upadte
   "auto_update": false,
-
   "base_keymap": null,
-  "format_on_save": "prettier",
-
+  "format_on_save": "language_server",
   "languages": {
     "Go": {
       "format_on_save": "on"
     },
     "Python": {
-      "language_servers": ["ruff", "pylsp"],
+      "language_servers": [
+        "ruff",
+        "pylsp"
+      ],
       "format_on_save": "on",
       "formatter": [
         {
@@ -49,7 +48,6 @@
       ]
     }
   },
-
   // Edit predections
   "edit_predictions": {
     "disabled_globs": [
@@ -62,21 +60,20 @@
       "**/secrets.yml"
     ]
   },
-  "edit_predictions_disabled_in": ["comment", "string"],
-
+  "edit_predictions_disabled_in": [
+    "comment",
+    "string"
+  ],
   // cursor
   "cursor_blink": false,
-
   // Scrollbar
   "scrollbar": {
     "show": "never"
   },
-
   // Tab bar
   "tab_bar": {
     "show": true
   },
-
   // Tool bar
   "toolbar": {
     "breadcrumbs": false,
@@ -84,10 +81,10 @@
     "agent_review": false,
     "selections_menu": false
   },
-
   // Inclue files
-  "file_scan_inclusions": [".env*"],
-
+  "file_scan_inclusions": [
+    ".env*"
+  ],
   // Indent guides
   "indent_guides": {
     "enabled": true,
@@ -96,7 +93,6 @@
     "coloring": "fixed",
     "background_coloring": "disabled"
   },
-
   // Diabale telemetry
   "telemetry": {
     "diagnostics": false,
@@ -111,7 +107,12 @@
     "default_height": 500,
     "detect_venv": {
       "on": {
-        "directories": [".env", "env", ".venv", "venv"],
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ],
         "activate_script": "default"
       }
     },
