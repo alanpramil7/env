@@ -10,10 +10,60 @@
 -- - "photon"      - Minimal theme
 -- - "material"    - Google Material Design
 -- - "visual_studio_code" - Visual Studio Code
+-- - "doom-one" - Doom One colorscheme
 
-local active_colorscheme = "visual_studio_code" -- Change this to switch themes
+local active_colorscheme = "doom-one" -- Change this to switch themes
 
 local colorschemes = {
+{
+        "NTBBloodbath/doom-one.nvim",
+        name = "doom-one",
+        priority = 1000,
+        opts = {
+            cursor_coloring = true, -- Add color to cursor
+            terminal_colors = true, -- Set :terminal colors
+            italic_comments = false, -- Enable italic comments
+            enable_treesitter = true, -- Enable TS support
+            diagnostics_text_color = true, -- Color whole diagnostic text or only underline
+            transparent_background = false, -- Enable transparent background
+            pumblend_enable = false, -- Pumblend transparency
+            pumblend_transparency = 20, -- Pumblend transparency level
+            plugin_neorg = true, -- Plugins integration
+            plugin_barbar = false,
+            plugin_telescope = false,
+            plugin_neogit = true,
+            plugin_nvim_tree = true,
+            plugin_dashboard = true,
+            plugin_startify = true,
+            plugin_whichkey = true,
+            plugin_indent_blankline = true,
+            plugin_vim_illuminate = true,
+            plugin_lspsaga = false,
+        },
+        config = function(_, opts)
+            -- Apply the doom-one specific configurations
+            vim.g.doom_one_cursor_coloring = opts.cursor_coloring
+            vim.g.doom_one_terminal_colors = opts.terminal_colors
+            vim.g.doom_one_italic_comments = opts.italic_comments
+            vim.g.doom_one_enable_treesitter = opts.enable_treesitter
+            vim.g.doom_one_diagnostics_text_color = opts.diagnostics_text_color
+            vim.g.doom_one_transparent_background = opts.transparent_background
+            vim.g.doom_one_pumblend_enable = opts.pumblend_enable
+            vim.g.doom_one_pumblend_transparency = opts.pumblend_transparency
+            vim.g.doom_one_plugin_neorg = opts.plugin_neorg
+            vim.g.doom_one_plugin_barbar = opts.plugin_barbar
+            vim.g.doom_one_plugin_telescope = opts.plugin_telescope
+            vim.g.doom_one_plugin_neogit = opts.plugin_neogit
+            vim.g.doom_one_plugin_nvim_tree = opts.plugin_nvim_tree
+            vim.g.doom_one_plugin_dashboard = opts.plugin_dashboard
+            vim.g.doom_one_plugin_startify = opts.plugin_startify
+            vim.g.doom_one_plugin_whichkey = opts.plugin_whichkey
+            vim.g.doom_one_plugin_indent_blankline = opts.plugin_indent_blankline
+            vim.g.doom_one_plugin_vim_illuminate = opts.plugin_vim_illuminate
+            vim.g.doom_one_plugin_lspsaga = opts.plugin_lspsaga
+            vim.cmd.colorscheme("doom-one")
+        end,
+    },
     {
         "andreypopp/vim-colors-plain",
         name = "plain",
