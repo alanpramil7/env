@@ -14,7 +14,7 @@
   // Set Theme
   "theme": {
     "mode": "dark",
-    "dark": "VSCode Dark Modern",
+    "dark": "Doom One Dark",
     "light": "One Light"
   },
   "project_panel": {
