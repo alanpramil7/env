@@ -36,10 +36,11 @@ local themes = {
     sequoia_moonlight = "Sequoia Moonlight",
     atelier_cave_light = "Atelier Cave Light (base16)",
     banana_blueberry = "Banana Blueberry",
+    doom_one = "DoomOne"
 }
 
 return {
-    color_scheme = themes.atelier_cave_light,
+    color_scheme = "DoomOne",
 
     -- OpenGL for GPU acceleration, Software for CPU
     front_end = "OpenGL",
@@ -190,50 +191,50 @@ return {
     -- },
 
     -- dark
-    colors = {
-        foreground = "#EFECF4",
-        background = "#000000", -- #1E1D2D #0F0F11 #1A2026 #1E1E28
-        cursor_bg = "#3A3A3A",
-        cursor_fg = "#ffffff",
-        cursor_border = "#EFECF4",
-        selection_fg = "#EFECF4",
-        selection_bg = "#56687E",
-        scrollbar_thumb = "#edeff0",
-        split = "#EFECF4",
-        ansi = {
-            "#6E6C7E",
-            "#F48FB1",
-            "#A1EFD3",
-            "#EBDDAA",
-            "#A4B9EF",
-            "#BD99FF",
-            "#87DFEB",
-            "#DADAE8",
-        },
-        brights = {
-            "#6E6C7E",
-            "#F48FB1",
-            "#A1EFD3",
-            "#EBDDAA",
-            "#A4B9EF",
-            "#BD99FF",
-            "#87DFEB",
-            "#DADAE8",
-        },
-        indexed = { [136] = "#edeff0" },
-        tab_bar = {
-            active_tab = {
-                bg_color = "#1A2026",
-                fg_color = "#F692B2",
-                italic = false,
-            },
-            background = "#1A2026",
-            -- inactive_tab = { bg_color = "#1A2026", fg_color = "#EFECF4" },
-            -- inactive_tab_hover = { bg_color = "#1A2026", fg_color = "#EFECF4" },
-            new_tab = { bg_color = "#1A2026", fg_color = "#EFECF4" },
-            -- new_tab_hover = { bg_color = "#A1D391", fg_color = "#090909" },
-        },
-    },
+    -- colors = {
+    --     foreground = "#EFECF4",
+    --     background = "#000000", -- #1E1D2D #0F0F11 #1A2026 #1E1E28
+    --     cursor_bg = "#3A3A3A",
+    --     cursor_fg = "#ffffff",
+    --     cursor_border = "#EFECF4",
+    --     selection_fg = "#EFECF4",
+    --     selection_bg = "#56687E",
+    --     scrollbar_thumb = "#edeff0",
+    --     split = "#EFECF4",
+    --     ansi = {
+    --         "#6E6C7E",
+    --         "#F48FB1",
+    --         "#A1EFD3",
+    --         "#EBDDAA",
+    --         "#A4B9EF",
+    --         "#BD99FF",
+    --         "#87DFEB",
+    --         "#DADAE8",
+    --     },
+    --     brights = {
+    --         "#6E6C7E",
+    --         "#F48FB1",
+    --         "#A1EFD3",
+    --         "#EBDDAA",
+    --         "#A4B9EF",
+    --         "#BD99FF",
+    --         "#87DFEB",
+    --         "#DADAE8",
+    --     },
+    --     indexed = { [136] = "#edeff0" },
+    --     tab_bar = {
+    --         active_tab = {
+    --             bg_color = "#1A2026",
+    --             fg_color = "#F692B2",
+    --             italic = false,
+    --         },
+    --         background = "#1A2026",
+    --         -- inactive_tab = { bg_color = "#1A2026", fg_color = "#EFECF4" },
+    --         -- inactive_tab_hover = { bg_color = "#1A2026", fg_color = "#EFECF4" },
+    --         new_tab = { bg_color = "#1A2026", fg_color = "#EFECF4" },
+    --         -- new_tab_hover = { bg_color = "#A1D391", fg_color = "#090909" },
+    --     },
+    -- },
 
     -- Padding
     window_padding = {

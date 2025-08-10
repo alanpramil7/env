@@ -33,7 +33,7 @@ readonly NC='\033[0m' # No Color
 
 # Configuration mapping: source_path:target_path
 readonly SYMLINK_CONFIG=(
-    # "config/hypr:$HOME/.config/hypr"
+    "config/hypr:$HOME/.config/hypr"
     "config/ghostty:$HOME/.config/ghostty"
     "config/nvim:$HOME/.config/nvim"
     "config/tmux:$HOME/.config/tmux"
@@ -43,8 +43,8 @@ readonly SYMLINK_CONFIG=(
     "config/tmux-sessionizer:$HOME/.config/tmux-sessionizer"
     # "config/i3:$HOME/.config/i3"
     # "config/alacritty:$HOME/.config/alacritty"
-    # "config/wezterm:$HOME/.config/wezterm"
-    # "config/waybar:$HOME/.config/waybar"
+    "config/wezterm:$HOME/.config/wezterm"
+    "config/waybar:$HOME/.config/waybar"
     "config/rofi:$HOME/.config/rofi"
     # "config/wofi:$HOME/.config/wofi"
     "config/.zshrc:$HOME/.zshrc"
