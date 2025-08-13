@@ -1,9 +1,9 @@
 #waybar {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.2);
   /* background: #1d2433; */
   color: #bfd3ff;
   font-family: "ComicShannsMono Nerd Font Mono";
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* padding */
@@ -16,17 +16,17 @@
 #language,
 #cpu,
 #memory{
-  padding: 3px 12px;
+  padding: 1px 10px;
 }
 #workspaces {
-  padding-left: 20px;
+  padding-left: 5px;
 }
 
 /* workspaces */
 
 #workspaces button {
-  font-size: 16px;
-  padding: 0 2px;
+  font-size: 10px;
+  padding: 0 1px;
   color: #3d4a66;
   border: none;
 }

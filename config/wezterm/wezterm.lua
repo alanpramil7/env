@@ -40,7 +40,7 @@ local themes = {
 }
 
 return {
-    color_scheme = "DoomOne",
+    color_scheme = themes.doom_one,
 
     -- OpenGL for GPU acceleration, Software for CPU
     front_end = "OpenGL",

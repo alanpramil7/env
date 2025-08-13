@@ -1,3 +1,5 @@
+@import "catppuccin-mocha"
+
 configuration{
     modi: "drun";
     icon-theme: "Numix-Circle";
