@@ -14,3 +14,7 @@ configuration{
     sidebar-mode: true;
     border-radius: 10;
 }
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+@theme "/usr/share/rofi/themes/android_notification.rasi"
