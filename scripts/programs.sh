@@ -30,6 +30,7 @@ readonly ESSENTIAL_PACKAGES=(
     "wget"
     "unzip"
     "openssh"
+    "tofi"
     "vim"
     "neovim"
     "tmux"

@@ -44,6 +44,7 @@ readonly SYMLINK_CONFIG=(
     # "config/i3:$HOME/.config/i3"
     # "config/alacritty:$HOME/.config/alacritty"
     "config/wezterm:$HOME/.config/wezterm"
+    "config/tofi:$HOME/.config/tofi"
     "config/waybar:$HOME/.config/waybar"
     "config/rofi:$HOME/.config/rofi"
     # "config/wofi:$HOME/.config/wofi"

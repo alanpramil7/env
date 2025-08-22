@@ -22,6 +22,7 @@ alias mv='mv --interactive'
 # Aliases: utility
 alias bat='cat /sys/class/power_supply/BAT0/capacity'
 alias bt='sudo systemctl start bluetooth'
+alias up='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 
 # Man colors
 man() {
