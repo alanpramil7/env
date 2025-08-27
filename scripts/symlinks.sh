@@ -35,7 +35,9 @@ readonly NC='\033[0m' # No Color
 readonly SYMLINK_CONFIG=(
     "config/hypr:$HOME/.config/hypr"
     "config/ghostty:$HOME/.config/ghostty"
+    "config/alacritty:$HOME/.config/alacritty"
     "config/nvim:$HOME/.config/nvim"
+    "config/kitty:$HOME/.config/kitty"
     "config/tmux:$HOME/.config/tmux"
     "config/mpv:$HOME/.config/mpv"
     "config/htop:$HOME/.config/htop"

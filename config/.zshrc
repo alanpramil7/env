@@ -23,6 +23,7 @@ alias mv='mv --interactive'
 alias bat='cat /sys/class/power_supply/BAT0/capacity'
 alias bt='sudo systemctl start bluetooth'
 alias up='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
+alias b1='brightnessctl set 1'
 
 # Man colors
 man() {
@@ -158,6 +159,7 @@ export ENV_DIR='~/personal/env'
 export PATH="$PATH:/home/al/.local/bin/"
 export PATH="$PATH:/home/al/.config/emacs/bin"
 export PATH="$PATH:/home/al/personal/env/scripts/"
+export PATH="$PATH:/home/al/go/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

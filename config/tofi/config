@@ -167,7 +167,7 @@
 ### Window theming
 #
 	# Width and height of the window. Can be pixels or a percentage.
-	width = 600
+	width = 800
 	height = 500
 
 	# Window background color
@@ -236,7 +236,7 @@
 ### Behaviour
 #
 	# Hide the mouse cursor.
-	hide-cursor = false
+	hide-cursor = true
 
 	# Show a text cursor in the input field.
 	text-cursor = false
