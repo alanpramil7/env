@@ -12,7 +12,7 @@
 -- - "visual_studio_code" - Visual Studio Code
 -- - "doom-one" - Doom One colorscheme
 
-local active_colorscheme = "doom-one" -- Change this to switch themes
+local active_colorscheme = "photon" -- Change this to switch themes
 
 local colorschemes = {
 {

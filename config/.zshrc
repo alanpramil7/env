@@ -25,6 +25,8 @@ alias bt='sudo systemctl start bluetooth'
 alias up='sudo pacman -Syu --noconfirm && yay -Syu --noconfirm'
 alias b1='brightnessctl set 1'
 
+alias gr='go run .'
+
 # Man colors
 man() {
   GROFF_NO_SGR=1 \

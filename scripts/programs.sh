@@ -44,7 +44,8 @@ readonly ESSENTIAL_PACKAGES=(
 )
 
 readonly DESKTOP_PACKAGES=(
-#    "alacritty"
+   "alacritty"
+    "kitty"
     "ghostty"
     "feh"
 #    "firefox"
@@ -58,6 +59,7 @@ readonly DESKTOP_PACKAGES=(
     "bluetui"
     "grim"
     "slurp"
+    "noto-fonts-emoji"
 )
 
 readonly NVIDIA_PACKAGES=(
